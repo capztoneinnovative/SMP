@@ -2,6 +2,47 @@
 
 <!-- templates/index.html -->
 
+<!-- templates/index.html -->
+
+<!-- templates/index.html -->
+
+<!-- templates/index.html -->
+
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Scheduler</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Schedule Your Post</h1>
+        <form id="scheduleForm" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Schedule Post</button>
+        </form>
+        <h1>Upload Multiple Files</h1>
+        <form id="filesForm" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ files_form.as_p }}
+            <button type="submit">Upload Files</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,4 +63,6 @@
     </div>
 </body>
 </html>
+
+
 

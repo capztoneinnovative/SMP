@@ -4,7 +4,7 @@ from django.db import models
 # scheduler_app/models.py
 
 # scheduler_app/models.py
-
+"""
 from django.db import models
 
 class ScheduledPost(models.Model):
@@ -15,4 +15,31 @@ class ScheduledPost(models.Model):
 
     def __str__(self):
         return self.text or 'No text'
+
+# scheduler_app/models.py
+
+from django.db import models
+
+class ScheduledPost(models.Model):
+    text = models.TextField()
+    date = models.DateField()
+    time = models.TimeField()
+
+    def __str__(self):
+        return self.text
+""" 
+
+from django.db import models
+
+class ScheduledPost(models.Model):
+    text = models.TextField()
+    image = models.ImageField(upload_to='uploads/')
+    date = models.DateField()
+    time = models.TimeField()
+
+    def __str__(self):
+        return self.text
+
+
+
 
